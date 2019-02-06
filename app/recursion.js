@@ -6,7 +6,7 @@ recursionAnswers = {
       dirName: 'app',
       files: ['index.html', 'page.html'],
       subDirs: [{...}]
-      }
+    }
    *
    * Where ... is the same type of object
    * 
@@ -17,7 +17,7 @@ recursionAnswers = {
    * @returns {Number[]} The files under the directory dirName, including subdiretories.
    */
   listFiles: function listFiles(data, dirName) {
-
+    return data.files
   },
 
   /**
@@ -30,6 +30,9 @@ recursionAnswers = {
    * @returns {Number} The nth fibonacci number
    */
   fibonacci: function fibonacci(n) {
-
+    if (n < 2) {
+      return n
+    }
+    return fibonacci(n-1) + fibonacci(n-2)
   },
 };
